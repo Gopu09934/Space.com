@@ -1,0 +1,183 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Space News - Explore the Universe</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #0e0e0e;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: url('https://source.unsplash.com/1600x400/?space') no-repeat center center/cover;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #1a1a1a;
+        }
+
+        nav a {
+            color: white;
+            padding: 15px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .main-content {
+            flex: 3;
+            margin-right: 20px;
+        }
+
+        .sidebar {
+            flex: 1;
+            background: #1f1f1f;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .article {
+            background: #1f1f1f;
+            border-radius: 10px;
+            margin: 10px 0;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .article img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .article h2 {
+            color: #4CAF50;
+        }
+
+        .article a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-size: 1.5em;
+            display: block;
+            margin: 10px 0;
+        }
+
+        .article a:hover {
+            text-decoration: underline;
+        }
+
+        .sidebar h2 {
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+
+        .fact {
+            background: #333;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .video-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #1a1a1a;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Space News</h1>
+        <p>Explore the Universe and Beyond</p>
+    </header>
+    <nav>
+        <a href="threestrike.jsp">Home</a>
+        <a href="#">Latest News</a>
+        <a href="#">Space Missions</a>
+        <a href="#">Astronomy</a>
+        <a href="#">Contact</a>
+    </nav>
+    <div class="container">
+        <div class="main-content">
+            <div class="article">
+                <img src="https://th.bing.com/th/id/R.2abbc33ac220efebebdb2b347afbcf47?rik=qkPo55ca1kEwug&riu=http%3a%2f%2fwallup.net%2fwp-content%2fuploads%2f2016%2f01%2f297996-space-Earth.jpg&ehk=LPVTPSuaysfspV3FWZYhRZiI6r1MuhDnjZGde%2fmsF54%3d&risl=&pid=ImgRaw&r=0" alt="The Universe">
+                <a href="secrets-of-the-universe.jsp">The Secrets of the Universe Unveiled</a>
+                <p>New research sheds light on dark matter and its implications for the cosmos. Scientists are closer to understanding the fundamental aspects of our universe.</p>
+            </div>
+            <div class="article">
+                <img src="https://th.bing.com/th/id/OIP.x7vbZwPTj_GMdzz2peY6PQHaG1?rs=1&pid=ImgDetMain" alt="Mars Exploration">
+                <h2>Exploring Mars: The Next Frontier</h2>
+                <p>The latest rover mission is providing unprecedented insights into the Martian surface, revealing clues about the planet's past and its potential for life.</p>
+            </div>
+            <div class="article">
+                <img src="https://images.unsplash.com/photo-1574169208504-fc6e92e8c6f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDEzfHxzdGFyc3xlbnwwfHx8fDE2OTAyNTExOTU&ixlib=rb-4.0.3&q=80&w=1080" alt="Stars">
+                <h2>The Mysteries of Black Holes</h2>
+                <p>Researchers have made a groundbreaking discovery regarding the formation of black holes and their impact on surrounding space.</p>
+            </div>
+
+            <!-- YouTube Video Section -->
+              <div class="video-container">
+    <h2>Watch: The Wonders of Space Exploration</h2>
+    <video width="70%" controls>
+        <source src="${pageContext.request.contextPath}/videos/your-video-file.mp4" type="video/mp4">
+    </video>
+</div>
+
+        </div>
+        <div class="sidebar">
+            <h2>Space Facts</h2>
+            <div class="fact">1. A day on Venus is longer than a year on Venus.</div>
+            <div class="fact">2. There are more stars in the universe than grains of sand on all the Earth's beaches.</div>
+            <div class="fact">3. One million Earths could fit inside the Sun.</div>
+            <div class="fact">4. Neutron stars are so dense that a teaspoon of material from one would weigh about as much as all of humanity.</div>
+            <div class="fact">5. Saturn's rings are made mostly of ice particles, with a smaller amount of rocky debris and dust.</div>
+            <div class="fact">6. The universe is about 13.8 billion years old.</div>
+            <div class="fact">7. Light from the Sun takes about 8 minutes to reach Earth.</div>
+            <div class="fact">8. The largest volcano in the solar system is Olympus Mons on Mars, which is about 13.6 miles high.</div>
+        </div>
+    </div>
+
+
+
+
+ <div class="footer">
+        <p>&copy; 2024 Space News. All Rights Reserved. Owned by Gopal Kumar</p>
+    </div>
+
+
+</body>
+</html>
